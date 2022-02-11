@@ -1,0 +1,19 @@
+{
+    "name": "alenkalac/omnipay-paypal-checkout-v2",
+    "description": "Omnipay support for PayPal checkout v2 api due to v1 being deprecated by PayPal",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alen Kalac",
+            "email": "alenkalac87@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\PayPalCV2\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "^3",
+        "omnipay/paypal": "^3.0"
+    }
+}

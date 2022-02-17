@@ -1,9 +1,12 @@
 Omnipay is a framework agnostic, multi-gateway payment processing library for PHP. This package implements PayPal support for Omnipay.
 
-Installation
-Omnipay is installed via Composer. To install, simply require league/omnipay and omnipay/paypal with Composer:
+# Installation
 
+Omnipay is installed via Composer. To install, simply require league/omnipay and omnipay/paypal with Composer:
+```
 composer require league/omnipay alenkalac/omnipay-paypal-checkout-v2
+```
+
 Basic Usage
 The following gateways are provided by this package:
 

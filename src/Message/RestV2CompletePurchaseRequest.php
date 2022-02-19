@@ -3,10 +3,19 @@
 namespace Omnipay\PayPalCV2\Message;
 
 use Omnipay\Common\Exception\InvalidRequestException;
+use Omnipay\Common\Exception\InvalidResponseException;
 use Omnipay\PayPal\Message\RestCompletePurchaseRequest;
 
 class RestV2CompletePurchaseRequest extends RestCompletePurchaseRequest {
     const API_VERSION = 'v2';
+
+    /**
+     * @throws InvalidResponseException
+     */
+    public function sendData($data): PayPalV2RestResponse {
+        $original = parent::sendData($data);
+        return new PayPalV2RestResponse($original->getRequest(), $original->getData(), $original->getCode());
+    }
 
     /**
      * Get the raw data array for this message. The format of this varies from gateway to
